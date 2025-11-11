@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports | Portals News</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at 30% 10%, #b69482, #2e1d1a, #1a1010);
+    color: #f4e8e0;
+    overflow-x: hidden;
+  }
+  body::before, body::after {
+    content: "";
+    position: fixed;
+    width: 400px; height: 400px;
+    border-radius: 50%; filter: blur(180px);
+    opacity: 0.4; z-index: -1;
+  }
+  body::before { top: -50px; left: -80px; background: #e2a5d3; }
+  body::after { bottom: -60px; right: -80px; background: #a678c2; }
+  header {
+    background: rgba(40, 25, 30, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    position: sticky; top: 0; z-index: 1000;
+  }
+  .logo-area { display: flex; align-items: center; }
+  .logo { width: 45px; height: 45px; border-radius: 50%; background: radial-gradient(circle at center, #d9a3c7, #5d2c63); box-shadow: 0 0 10px #c991d9; margin-right: 10px; }
+  header h1 { font-family: "Georgia", serif; font-size: 1.6em; color: #e9d4f5; }
+  nav { display: flex; gap: 15px; }
+  nav a { text-decoration: none; color: #f1d3ea; font-weight: bold; transition: 0.3s; }
+  nav a:hover { color: #d595c9; }
+  .hero {
+    background: linear-gradient(180deg, rgba(88,60,75,0.7), rgba(30,20,25,0.7));
+    text-align: center; padding: 80px 20px;
+  }
+  .hero h2 { font-size: 2.4em; color: #f1d3ea; text-shadow: 0 0 10px #b171b5; }
+  .section-title { text-align: center; color: #f4c9e1; margin-top: 60px; margin-bottom: 20px; text-shadow: 0 0 8px #ab7db9; }
+  .news-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; padding: 0 40px 80px;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover { transform: translateY(-5px); box-shadow: 0 0 25px rgba(195,140,210,0.4); }
+  .card img { width: 100%; height: 170px; object-fit: cover; filter: brightness(0.8); }
+  .card .content { padding: 15px; }
+  .card h3 { color: #f1c6e0; margin-bottom: 8px; }
+  .card p { color: #e0cadb; font-size: 0.9em; }
+  footer { text-align: center; background: rgba(40, 25, 30, 0.8); padding: 20px; color: #f1c6e0; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-area">
+    <div class="logo"></div>
+    <h1>PORTALS NEWS</h1>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="entertainment.html">Entertainment</a>
+    <a href="sports.html">Sports</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="comics.html">Comics</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Sports Portal</h2>
+  <p>Where determination and destiny collide — step into the surreal world of sports reborn.</p>
+</section>
+
+<h2 class="section-title">Latest in Sports</h2>
+<div class="news-grid">
+
+  <a href="https://www.abs-cbn.com/sports/othersports/2025/11/10/uaap-feu-women-dominate-en-route-to-26th-title-in-athletics-1515" class="card-link">
+  <div class="card">
+    <img src="feugirlies.jpeg" >
+    <div class="content">
+      <h3>UAAP: FEU women dominate en route to 26th title in athletics</h3>
+    </div>
+  </div>
+  </a>
+  
+  
+    <a href="https://www.abs-cbn.com/sports/basketball/2025/11/11/andy-gemao-locked-in-on-us-ncaa-dream-ito-talaga-yung-goal-ko-1829" class="card-link">
+  <div class="card">
+    <img src="andy.jpeg" >
+    <div class="content">
+      <h3>UAAP: FEU women dominate en route to 26th title in athletics</h3>
+    </div>
+  </div>
+  </a>
+  
+    <a href="https://www.abs-cbn.com/sports/basketball/2025/11/11/uaap-ue-s-john-abate-bids-goodbye-to-collegiate-career-1831" class="card-link">
+  <div class="card">
+    <img src="john.jpeg" >
+    <div class="content">
+      <h3>UAAP: UE's John Abate bids goodbye to collegiate career</h3>
+    </div>
+  </div>
+</div>
+</a>
+
+<footer>© 2025 Portals News — The Game Beyond Reality.</footer>
+</body>
+</html>

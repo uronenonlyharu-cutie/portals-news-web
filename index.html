@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portals News</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at 30% 10%, #b69482, #2e1d1a, #1a1010);
+    color: #f4e8e0;
+    overflow-x: hidden;
+  }
+  body::before, body::after {
+    content: "";
+    position: fixed;
+    width: 400px; height: 400px;
+    border-radius: 50%; filter: blur(180px);
+    opacity: 0.4; z-index: -1;
+  }
+  body::before { top: -50px; left: -80px; background: #e2a5d3; }
+  body::after { bottom: -60px; right: -80px; background: #a678c2; }
+
+  header {
+    background: rgba(40, 25, 30, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    position: sticky; top: 0; z-index: 1000;
+  }
+  .logo-area { display: flex; align-items: center; }
+  .logo {
+    width: 45px; height: 45px; border-radius: 50%;
+    background: radial-gradient(circle at center, #d9a3c7, #5d2c63);
+    box-shadow: 0 0 10px #c991d9; margin-right: 10px;
+  }
+  header h1 { font-family: "Georgia", serif; font-size: 1.6em; color: #e9d4f5; }
+  nav { display: flex; gap: 15px; }
+  nav a { text-decoration: none; color: #f1d3ea; font-weight: bold; transition: 0.3s; }
+  nav a:hover { color: #d595c9; }
+  .search-bar {
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px; padding: 5px 15px; color: #fff;
+  }
+
+  .hero {
+    background: linear-gradient(180deg, rgba(88,60,75,0.7), rgba(30,20,25,0.7));
+    text-align: center; padding: 80px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 80px rgba(165, 104, 178, 0.2);
+  }
+  .hero h2 { font-size: 2.4em; color: #f1d3ea; text-shadow: 0 0 10px #b171b5; }
+  .hero p { color: #e3d0e0; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
+
+  .section-title { text-align: center; color: #f4c9e1; margin: 60px 0 20px; text-shadow: 0 0 8px #ab7db9; }
+  .news-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; padding: 0 40px 80px;
+  }
+
+  /* Make the entire card clickable */
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(195,140,210,0.4);
+  }
+
+  .card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    filter: brightness(0.8);
+  }
+
+  .card .content {
+    padding: 15px;
+  }
+
+  .card h3 {
+    color: #f1c6e0;
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    color: #e0cadb;
+    font-size: 0.9em;
+  }
+
+  footer {
+    text-align: center;
+    background: rgba(40, 25, 30, 0.8);
+    padding: 20px;
+    color: #f1c6e0;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-area">
+    <div class="logo"></div>
+    <h1>PORTALS NEWS</h1>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="entertainment.html">Entertainment</a>
+    <a href="sports.html">Sports</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="comics.html">Comics</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Step Into the Portal</h2>
+  <p>Explore stories that blur the line between dream and reality — from entertainment to fashion, sports, and art.</p>
+</section>
+
+<h2 class="section-title">Latest News</h2>
+
+<div class="news-grid">
+
+  <a href="https://www.abs-cbn.com/news/weather-traffic/2025/11/11/tropical-cyclone-uwan-continues-to-weaken-over-west-philippine-se-1745" class="card-link">
+    <div class="card">
+      <img src="uwan.jpeg" alt="Latest News">
+      <div class="content">
+        <h3>Tropical cyclone Uwan continues to weaken over West Philippine Sea <h3>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://newsinfo.inquirer.net/2138137/lacson-back-as-blue-ribbon-panel-head" class="card-link">
+    <div class="card">
+      <img src="lacson.jpeg" alt="Latest News">
+      <div class="content">
+        <h3>Lacson back as blue ribbon panel head</h3>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://www.pna.gov.ph/articles/1263042" class="card-link">
+    <div class="card">
+      <img src="doj.jpeg" alt="Latest News">
+      <div class="content">
+        <h3>DOJ: ICC arrest warrant vs. Dela Rosa unconfirmed</h3>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://www.pna.gov.ph/articles/1263055" class="card-link">
+    <div class="card">
+      <img src="dswd.jpeg" alt="Latest News">
+      <div class="content">
+        <h3>DSWD disburses P44-M in aid to Uwan-hit Bicol areas</h3>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+<footer>© 2025 Portals News — Step Through the Other Side.</footer>
+</body>
+</html>
